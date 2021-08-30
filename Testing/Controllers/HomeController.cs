@@ -55,6 +55,18 @@ namespace Testing.Controllers
             return View();
         }
 
+        public IActionResult InsertProduct()
+        {
+            var prod = repo.AssignCategory();
+            return View(prod);
+        }
+
+        public IActionResult InsertProductToDatabase(Product productToInsert)
+        {
+            repo.InsertProduct(productToInsert);
+            return RedirectToAction("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
