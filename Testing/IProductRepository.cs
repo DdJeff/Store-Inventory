@@ -5,8 +5,9 @@ using Testing.Models;
 
 namespace Testing
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
         public IEnumerable<Product> GetAllProducts();
+        public Product GetProduct(int id);
     }
 }

@@ -1,10 +1,4 @@
-﻿@{ ViewData["Title"] = "Home Page"; }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+﻿
 @{
     ViewData["Title"] = "Index";
 }
@@ -23,7 +17,7 @@
     @foreach (var product in Model)
     {
         <tr>
-            <td><a href=/Home/ViewProduct/@product.ProductID>@product.ProductID</a></td>
+            <td>@product.ProductID</td>
             <td>@product.Name</td>
             <td>@product.Price</td>
             <td>@product.CategoryID</td>
