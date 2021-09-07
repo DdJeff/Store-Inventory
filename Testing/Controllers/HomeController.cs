@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Testing.Models;
 
 namespace Testing.Controllers
@@ -13,13 +9,20 @@ namespace Testing.Controllers
     {
        
         private readonly IProductRepository repo;
+
        
 
+        
         public HomeController(IProductRepository repo)
         { this.repo = repo;
+
+            
             
         }
 
+        /// <summary>
+        ///  This controller
+        /// </summary>
         //get all products
         public IActionResult Index()
         {
