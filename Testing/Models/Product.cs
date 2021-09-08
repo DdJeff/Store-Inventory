@@ -9,7 +9,7 @@ namespace Testing.Models
     {
         public Product()
         {
-
+            ///<summary>The modal of the database</summary>
         }
 
         public int ProductID { get; set; }
